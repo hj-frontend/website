@@ -6,4 +6,4 @@
 	:maxdepth: 3
 
 	best-practice/index
-	sphinx/index
+	howto-write-sphinx

@@ -1,12 +1,5 @@
-
-.. meta::
-   :keywords: sphinx
-
-
-Sphinx简介
+如何编写Sphinx文档
 =================================================
-
-.. image:: http://sphinx.pocoo.org/_static/sphinx.png
 
 **Sphinx安装**
 	* Sphinx是基于Python的，所以如没有安装Python 2.x的，需要到这里下载安装：http://www.python.org/getit/
@@ -26,39 +19,5 @@ Sphinx简介
 	* 提交更新到github完成发布。
 	* 本文档网站：http://hj-frontend.github.com/website/docs/index.html
 
-**reStructuredText语法演示**
-
-*itatic* **bold** ``inline code``
-
-.. note:: 这是一个提示.
-
-   - The note contains all indented body elementsfollowing.
-   - It includes this bullet list.
-
-.. container:: myContent
-
-   这是一个普通容器.
-
-`这是一个链接 <http://www.hujiang.com>`_
-
-.. raw:: html
-   
-   <script type="text/javascript" src="http://dict.hjenglish.com/app/js/dict_ajax.js"></script>
-
-**HTML代码片段:**
-
-.. sidebar:: sidebar
-
-   Sidebars are like miniature, parallel documents that occur inside other documents, providing related or reference material. A sidebar is typically offset by a border and "floats" to the side of the page; the document's main text may flow around it. Sidebars can also be likened to super-footnotes; their content is outside of the flow of the document's main text.
-
-.. code-block:: html
-
-	<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-	  ...
-	  <li class="dropdown-submenu">
-	    <a tabindex="-1" href="#">More options</a>
-	    <ul class="dropdown-menu">
-	      ...
-	    </ul>
-	  </li>
-	</ul>
+**reStructuredText语法**
+	* http://sphinx-doc.org/rest.html

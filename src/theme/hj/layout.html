@@ -88,7 +88,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset={{ encoding }}" />
     {{ metatags }}
     {%- block htmltitle %}
-    <title>{{ project }}</title>
+    <title>{{ title|striptags|e }}</title>
     {%- endblock %}
     {{ css() }}
     {%- if not embedded %}
