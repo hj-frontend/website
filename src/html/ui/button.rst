@@ -2,6 +2,11 @@
 Button
 ====================
 
-.. code-block:: html
+**jQuery Button Demo：**
 
-	<button class="btn btn-primary" type="button">Default button</button>
+.. raw:: html
+	:file: ../../../raw/button.html
+
+**源码：**
+
+.. literalinclude:: ../../../raw/button.html

@@ -12,6 +12,7 @@ Sphinx简介
    * 简单安装说明 http://code.google.com/p/pymotwcn/wiki/SphinxprojectHowto
    * 官方文档 http://sphinx-doc.org/contents.html
    * reStructuredText Markup Specification http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html
+   * 代码插入说明 http://sphinx-doc.org/markup/code.html
 
 
 .. note:: 这是一个提示.
