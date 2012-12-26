@@ -43,17 +43,15 @@ clean:
 
 htmlall:
 	$(SPHINXBUILD) -b html -a $(ALLSPHINXOPTS) $(BUILDDIR)
-	rm -rf $(BUILDDIR)/_sources
-	rm -rf $(BUILDDIR)/static
-	mv -if _static static
+	rm -rf $(BUILDDIR)/_sources	
+	[ -d $(BUILDDIR)/_static ] && rm -rf $(BUILDDIR)/static && mv -if $(BUILDDIR)/_static $(BUILDDIR)/static || exit 0
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)."
 
 html:
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)
 	rm -rf $(BUILDDIR)/_sources
-	rm -rf $(BUILDDIR)/static
-	mv -if _static static
+	[ -d $(BUILDDIR)/_static ] && rm -rf $(BUILDDIR)/static && mv -if $(BUILDDIR)/_static $(BUILDDIR)/static || exit 0
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)."
 
