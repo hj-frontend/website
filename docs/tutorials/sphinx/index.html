@@ -59,8 +59,7 @@
   <div class="section" id="sphinx">
 <h1>Sphinx简介<a class="headerlink" href="#sphinx" title="Permalink to this headline">¶</a></h1>
 <img alt="http://sphinx.pocoo.org/_static/sphinx.png" src="http://sphinx.pocoo.org/_static/sphinx.png" />
-<ul>
-<li><dl class="first docutils">
+<dl class="docutils">
 <dt><strong>Sphinx安装</strong></dt>
 <dd><ul class="first last simple">
 <li>Sphinx是基于Python的，所以如没有安装Python 2.x的，需要到这里下载安装：<a class="reference external" href="http://www.python.org/getit/">http://www.python.org/getit/</a></li>
@@ -68,9 +67,6 @@
 <li>安装Sphinx，在bash或cmd下运行：easy_install -U Sphinx</li>
 </ul>
 </dd>
-</dl>
-</li>
-<li><dl class="first docutils">
 <dt><strong>Sphinx文档</strong></dt>
 <dd><ul class="first last simple">
 <li>简单安装说明 <a class="reference external" href="http://code.google.com/p/pymotwcn/wiki/SphinxprojectHowto">http://code.google.com/p/pymotwcn/wiki/SphinxprojectHowto</a></li>
@@ -79,9 +75,6 @@
 <li>代码插入说明 <a class="reference external" href="http://sphinx-doc.org/markup/code.html">http://sphinx-doc.org/markup/code.html</a></li>
 </ul>
 </dd>
-</dl>
-</li>
-<li><dl class="first docutils">
 <dt><strong>编译发布</strong></dt>
 <dd><ul class="first last simple">
 <li>首先checkout我们的网站项目：<a class="reference external" href="https://github.com/hj-frontend/website">https://github.com/hj-frontend/website</a>，切换到gh-pages分支。</li>
@@ -92,8 +85,8 @@
 </ul>
 </dd>
 </dl>
-</li>
-</ul>
+<p><strong>reStructuredText语法演示</strong></p>
+<p><em>itatic</em> <strong>bold</strong> <tt class="docutils literal"><span class="pre">inline</span> <span class="pre">code</span></tt></p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p>这是一个提示.</p>
@@ -126,12 +119,14 @@
 
             <div id="disqus_thread"></div>
 <script type="text/javascript">
-    var disqus_shortname = 'hj-frontend';
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
+    if(window.location.host == "hj-frontend.github.com"){
+        var disqus_shortname = 'hj-frontend';
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    }
 </script>
           </div>
         </div>
