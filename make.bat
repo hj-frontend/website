@@ -48,8 +48,8 @@ if "%1" == "htmlall" (
 	%SPHINXBUILD% -b html -a %ALLSPHINXOPTS% %BUILDDIR%
 	if errorlevel 1 exit /b 1
 	if exist %BUILDDIR%\_sources rmdir %BUILDDIR%\_sources /s /q
-	if exist %BUILDDIR%\static rmdir %BUILDDIR%\static /s /q
-	ren %BUILDDIR%\_static static
+	if exist %BUILDDIR%\_static (if exist %BUILDDIR%\static rmdir %BUILDDIR%\static /s /q)
+	if exist %BUILDDIR%\_static ren %BUILDDIR%\_static static
 	echo.
 	echo.Build finished. The HTML pages are in %BUILDDIR%.
 	goto end
@@ -59,8 +59,8 @@ if "%1" == "html" (
 	%SPHINXBUILD% -b html %ALLSPHINXOPTS% %BUILDDIR%
 	if errorlevel 1 exit /b 1
 	if exist %BUILDDIR%\_sources rmdir %BUILDDIR%\_sources /s /q
-	if exist %BUILDDIR%\static rmdir %BUILDDIR%\static /s /q
-	ren %BUILDDIR%\_static static
+	if exist %BUILDDIR%\_static (if exist %BUILDDIR%\static rmdir %BUILDDIR%\static /s /q)
+	if exist %BUILDDIR%\_static ren %BUILDDIR%\_static static
 	echo.
 	echo.Build finished. The HTML pages are in %BUILDDIR%.
 	goto end
