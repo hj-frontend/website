@@ -3,7 +3,8 @@
 <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
 
 <script>
-$(function() {
+var jQuery183 = $.noConflict(true);
+jQuery183(function($) {
     $( "input[type=submit], button" )
         .button()
         .click(function( event ) {

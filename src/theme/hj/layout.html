@@ -64,6 +64,15 @@
 {%- endmacro %}
 
 {%- macro script() %}
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:    '{{ url_root }}',
+            VERSION:     '{{ release|e }}',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '{{ '' if no_search_suffix else file_suffix }}',
+            HAS_SOURCE: {{ has_source | lower }}
+        };
+    </script>
     <script type="text/javascript" src="{{ pathto('static/jquery.js', 1) }}"></script>
     <script type="text/javascript" src="{{ pathto('static/underscore.js', 1) }}"></script>
     <script type="text/javascript" src="{{ pathto('static/doctools.js', 1) }}"></script>
@@ -113,6 +122,7 @@
       {%- endif %}
           <div class="body">
             {% block body %} {% endblock %}
+            {% include "comment.html" %}
           </div>
       {%- if render_sidebar %}
         </div>
