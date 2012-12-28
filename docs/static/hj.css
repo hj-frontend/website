@@ -12,9 +12,12 @@
 @import url("basic.css");
  
 /* -- page layout ----------------------------------------------------------- */
- 
-body {
-    font-family: "Helvetica Neue", Helvetica, "microsoft yahei", Arial, sans-serif;
+
+* {
+    font-family: "Trebuchet MS", Helvetica, "microsoft yahei", Arial, sans-serif;
+}
+
+body {    
     font-size: 100%;
     background-color: #f5f5f5;
     color: #555;
@@ -41,7 +44,6 @@ div.document {
  
 div.body {
     color: #3E4349;
-    padding: 30px 30px 30px 30px;
     font-size: 0.9em;
 }
  
@@ -119,7 +121,11 @@ div.related a {
     text-decoration: none;
 }
 
-.body .section:first-child, div.sphinxsidebarwrapper{
+.body{
+    margin: 30px;
+}
+
+.body, div.sphinxsidebarwrapper{
     background-color: white;
     border: 1px solid #DADADA;
     padding: 10px;

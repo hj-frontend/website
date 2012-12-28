@@ -1,4 +1,3 @@
-
 .. _common-guide:
 
 通用约定
