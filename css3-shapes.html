@@ -3,52 +3,299 @@
 <title>CSS3 Shapes</title>
 <style type="text/css">
 body{
-	background: #eee;
+    background: #eee;
+}
+
+.clearfix:after{
+    display: block;
+    content: "";
+    clear: both;
+    visibility: hidden;
+    height: 0;
+}
+`
+.clearfix{
+    *zoom: 1;
+}
+
+
+.shape-item{
+
+}
+
+.shape-example{
+    float: left;
+    width: 150px;
+    margin: 0 0 10px 0;
+}
+
+.shape-code{
+    float: left;
+    margin: 0 0 0 30px;
+    width: 500px;
+    background: #666;
+    color: #fff;
+    font: 13px/18px Consolas, 'Courier New', mono, serif;
+    padding: 15px;
+    margin: 0 0 15px 0;
+    border-radius: 5px;
+}
+
+.shape-code pre{
+    margin: 0;
+}
+
+.blk{
+    display: block;
 }
 
 .triangle-up{
-	width: 0;
-	height: 0;
-	border-left: 50px solid transparent;
-	border-right: 50px solid transparent;
-	border-bottom: 100px solid green;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid #666;
 }
 
 .halfcircle{
-     height:45px;
-     width:90px;
-     border-radius: 90px 90px 0 0;
-     -moz-border-radius: 90px 90px 0 0;
-     -webkit-border-radius: 90px 90px 0 0;
-     background: green;
+    height: 50px;
+    width: 100px;
+    border-radius: 100px 100px 0 0;
+    -moz-border-radius: 100px 100px 0 0;
+    -webkit-border-radius: 100px 100px 0 0;
+    background: #666;
 }
 
 .speech-bubble{
-   width: 120px; 
-   height: 80px; 
-   background: purple;
-   position: absolute;
-   -moz-border-radius: 10px; 
-   -webkit-border-radius: 10px; 
-   border-radius: 10px;
+    width: 110px; 
+    height: 70px; 
+    background: #666;
+    -moz-border-radius: 10px; 
+    -webkit-border-radius: 10px; 
+    border-radius: 10px;
+    margin-left: 20px;
 }
 .speech-bubble:before{
-   content:"";
-   position: absolute;
-   width: 0;
-   height: 0;
-   border-top: 13px solid transparent;
-   border-right: 26px solid green;
-   border-bottom: 13px solid transparent;
-   margin: 13px 0 0 -25px;
+    content:"";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-right: 20px solid #666;
+    border-bottom: 10px solid transparent;
+    margin: 10px 0 0 -20px;
 }
+
+.heart{
+    position: relative;
+}
+.heart:before, .heart:after {
+    position: absolute;
+    content: "";
+    left: 60px; 
+    top: 0;
+    width: 60px;
+    height: 100px;
+    background: #666;
+    -moz-border-radius: 50px 50px 0 0;
+    border-radius: 50px 50px 0 0;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-transform-origin: 0 100%;
+    -moz-transform-origin: 0 100%;
+    -ms-transform-origin: 0 100%;
+    -o-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+}
+.heart:after { 
+    left: 0; 
+    -webkit-transform: rotate(45deg); 
+    -moz-transform: rotate(45deg); 
+    -ms-transform: rotate(45deg); 
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transform-origin: 100% 100%;
+    -moz-transform-origin: 100% 100%;
+    -ms-transform-origin: 100% 100%;
+    -o-transform-origin: 100% 100%;
+    transform-origin :100% 100%;
+}
+
+.magnifying-glass
+{
+    font-size: 8em; /* This controls the size. */
+    display: inline-block;
+    width: 0.4em;
+    height: 0.4em;
+    border: 0.1em solid #666;
+    position: relative;
+    border-radius: 0.35em;
+}
+.magnifying-glass::before
+{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    right: -0.25em;
+    bottom: -0.1em;
+    border-width: 0;
+    background: #666;
+    width: 0.35em;
+    height: 0.08em;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+}
+
 </style>
 
 <body>
 
-<div class="triangle-up"></div>
-<div class="halfcircle"></div>
-<div class="speech-bubble"></div>
+<div class="shape-item clearfix">
+    <div class="shape-example">
+        <i class="triangle-up blk"></i>
+    </div>
+    <div class="shape-code">
+<pre>
+.triangle-up{
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid #63cb00;
+}</pre>
+    </div>
+</div>
+
+<div class="shape-item clearfix">
+    <div class="shape-example">
+        <i class="halfcircle blk"></i>
+    </div>
+    <div class="shape-code">
+<pre>
+.halfcircle{
+    height:45px;
+    width:90px;
+    border-radius: 90px 90px 0 0;
+    -moz-border-radius: 90px 90px 0 0;
+    -webkit-border-radius: 90px 90px 0 0;
+    background: #63cb00;
+}</pre>
+    </div>
+</div>
+
+<div class="shape-item clearfix">
+    <div class="shape-example">
+        <i class="speech-bubble blk"></i>
+    </div>
+    <div class="shape-code">
+<pre>
+.speech-bubble{
+    width: 110px; 
+    height: 70px; 
+    background: #666;
+    -moz-border-radius: 10px; 
+    -webkit-border-radius: 10px; 
+    border-radius: 10px;
+    margin-left: 20px;
+}
+.speech-bubble:before{
+    content:"";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-right: 20px solid #666;
+    border-bottom: 10px solid transparent;
+    margin: 10px 0 0 -20px;
+}</pre>
+    </div>
+</div>
+
+<div class="shape-item clearfix">
+    <div class="shape-example">
+        <i class="heart blk"></i>
+    </div>
+    <div class="shape-code">
+<pre>
+.heart{
+    position: relative;
+}
+.heart:before, .heart:after {
+    position: absolute;
+    content: "";
+    left: 60px; 
+    top: 0;
+    width: 60px;
+    height: 100px;
+    background: #666;
+    -moz-border-radius: 50px 50px 0 0;
+    border-radius: 50px 50px 0 0;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-transform-origin: 0 100%;
+    -moz-transform-origin: 0 100%;
+    -ms-transform-origin: 0 100%;
+    -o-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+}
+.heart:after { 
+    left: 0; 
+    -webkit-transform: rotate(45deg); 
+    -moz-transform: rotate(45deg); 
+    -ms-transform: rotate(45deg); 
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transform-origin: 100% 100%;
+    -moz-transform-origin: 100% 100%;
+    -ms-transform-origin: 100% 100%;
+    -o-transform-origin: 100% 100%;
+    transform-origin :100% 100%;
+}</pre>
+    </div>
+</div>
+
+<div class="shape-item clearfix">
+    <div class="shape-example">
+        <i class="magnifying-glass blk"></i>
+    </div>
+    <div class="shape-code">
+<pre>
+.magnifying-glass
+{
+    font-size: 8em;
+    display: inline-block;
+    width: 0.4em;
+    height: 0.4em;
+    border: 0.1em solid #666;
+    position: relative;
+    border-radius: 0.35em;
+}
+.magnifying-glass::before
+{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    right: -0.25em;
+    bottom: -0.1em;
+    border-width: 0;
+    background: #666;
+    width: 0.35em;
+    height: 0.08em;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+}</pre>
+    </div>
+</div>
 
 </body>
 
