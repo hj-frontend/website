@@ -4,4 +4,5 @@ JavaScript代码片段
 
 .. toctree::
 
-	jbox-usage
+	jbox-usage	
+	swf-creation
