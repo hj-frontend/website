@@ -2,18 +2,53 @@
 <html>
 <title>CSS3 Shapes</title>
 <style type="text/css">
+body{
+	background: #eee;
+}
+
 .triangle-up{
 	width: 0;
 	height: 0;
 	border-left: 50px solid transparent;
 	border-right: 50px solid transparent;
-	border-bottom: 100px solid red;
+	border-bottom: 100px solid green;
+}
+
+.halfcircle{
+     height:45px;
+     width:90px;
+     border-radius: 90px 90px 0 0;
+     -moz-border-radius: 90px 90px 0 0;
+     -webkit-border-radius: 90px 90px 0 0;
+     background: green;
+}
+
+.speech-bubble{
+   width: 120px; 
+   height: 80px; 
+   background: purple;
+   position: absolute;
+   -moz-border-radius: 10px; 
+   -webkit-border-radius: 10px; 
+   border-radius: 10px;
+}
+.speech-bubble:before{
+   content:"";
+   position: absolute;
+   width: 0;
+   height: 0;
+   border-top: 13px solid transparent;
+   border-right: 26px solid green;
+   border-bottom: 13px solid transparent;
+   margin: 13px 0 0 -25px;
 }
 </style>
 
 <body>
 
 <div class="triangle-up"></div>
+<div class="halfcircle"></div>
+<div class="speech-bubble"></div>
 
 </body>
 
