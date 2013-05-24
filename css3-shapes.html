@@ -1,23 +1,8 @@
 <!DOCTYPE html>
 <html>
 <title>CSS3 Shapes</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
 <style type="text/css">
-body{
-    background: #eee;
-}
-
-.clearfix:after{
-    display: block;
-    content: "";
-    clear: both;
-    visibility: hidden;
-    height: 0;
-}
-`
-.clearfix{
-    *zoom: 1;
-}
-
 
 .shape-item{
 
@@ -154,6 +139,22 @@ body{
 </style>
 
 <body>
+
+<div class="header-layout">
+    <div class="header">
+        <h1 class="header-title">CSS3 Shapes</h1>
+    </div>
+</div>
+
+<ul class="colorline clearfix">
+    <li class="orange"></li>
+    <li class="green"></li>
+    <li class="red"></li>
+    <li class="yellow"></li>
+    <li class="pink"></li>
+</ul>
+
+<div class="main">
 
 <div class="shape-item clearfix">
     <div class="shape-example">
@@ -295,6 +296,8 @@ body{
     -o-transform: rotate(45deg);
 }</pre>
     </div>
+</div>
+
 </div>
 
 </body>
